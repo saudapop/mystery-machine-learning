@@ -1,0 +1,122 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  /* animation: App-logo-spin infinite 20s linear; */
+  display: flex;
+  max-width: 30%;
+  height: auto;
+  /* pointer-events: none; */
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.github-logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 5vw;
+  filter: invert(100%);
+}
+
+.header {
+  margin-bottom: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.text-preview {
+  font-size: 2.5vw;
+  max-width: 80vw;
+}
+
+.text-area {
+  margin: 15px 0px;
+  background: gainsboro;
+  min-height: 10vw;
+  min-width: 50vw;
+  max-width: 80vw;
+  font-size: 15px;
+  border-radius: 10px;
+  color: black;
+  background-color: white;
+}
+
+.winner,
+.data-table {
+  margin: 25px 0px;
+  display: flex;
+  justify-content: center;
+}
+
+.image-container {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.winner-image {
+  width: 100%;
+  height: auto;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 15px;
+}
+.results {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-self: flex-start;
+  font-size: 2.5vw;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.2);
+  margin: 0px 10px;
+}
+
+.explanation-header {
+  margin: 25px 0px;
+}
+
+.explanation {
+  align-self: flex-start;
+  width: 40vw;
+  font-size: 2.5vw;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.person-name {
+  display: flex;
+}
+
+.person-score {
+  padding-left: 6vw;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

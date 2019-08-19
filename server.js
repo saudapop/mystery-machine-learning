@@ -43,5 +43,5 @@ app.post("/predict", (req, res) => {
 const port = process.env.PORT || 3000;
 
 app.listen(port, () => {
-  console.log("server started on http://localhost:" + port);
+  console.log("App is running on http://localhost:" + port);
 });

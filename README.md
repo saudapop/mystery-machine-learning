@@ -26,7 +26,7 @@ Assuming you have node and npm installed, just run
 It's going to run a bunch of stuff and install dependencies and build the static and do a bunch of beep boop stuff. When it's done your terminal should say something like
 
 `
-server started on http://localhost:3000
+App is running on http://localhost:3000
 `
 
 Navigate to that bad boy and play around with the app. 

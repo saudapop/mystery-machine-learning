@@ -34,6 +34,7 @@ Navigate to that bad boy and play around with the app.
 ## Run the app in development mode
 
 1. **Start the front-end**
+
 If you want to mess around with the front-end run this command in a new terminal from the root:
 
 #### `cd client; npm start`
@@ -41,6 +42,7 @@ If you want to mess around with the front-end run this command in a new terminal
 This will run the react app in dev mode and it will hot reload any time you make a change to the front end. 
 
 2. **Start the back-end(if its not already running)**
+
 The back-end also needs to be running to make API calls. In a separate terminal,from the project root run 
 
 #### `npm start`

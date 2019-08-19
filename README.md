@@ -8,6 +8,8 @@ This app was adapted (_...appdapted?_) from an app that [Peter Hurford](https://
 
 ## Run the app locally
 
+Clone the repo using whichever method you prefer. It's your life I can't tell how you should clone a repo.
+
 1. **Plug in your token**
 
 From the project root create a file called `constants.js` and enter this code but replace the string with your token:

@@ -19,18 +19,28 @@ module.exports = API_TOKEN;
 
 2. **Install the app**
 
-Assuming you have node and npm installed, just run `npm i`. It's going to run a bunch of stuff and install dependencies and build the static and do a bunch of beep boop stuff. When it's done your terminal should say something like
+Assuming you have node and npm installed, just run 
+
+#### `npm i` 
+
+It's going to run a bunch of stuff and install dependencies and build the static and do a bunch of beep boop stuff. When it's done your terminal should say something like
 
 ```
 server started on http://localhost:3000
 ```
 
-Click that bad boy and play around with the app. To run the app again some other time down the road just run after you've already installed all the dependencies `npm start` from the project root.
+Navigate to that bad boy and play around with the app. 
 
 ## Run the app in development mode
 
-If you want to play around with the front-end run this command in a new terminal from the root:
+1. **Start the front-end**
+If you want to mess around with the front-end run this command in a new terminal from the root:
 
-`cd client; npm start`
+#### `cd client; npm start`
 
-This will run the react app in dev mode and it will hot reload any time you make a change to the front end. The back-end also needs to be running to make API calls. If it is not already running, from the project root run `npm start`
+This will run the react app in dev mode and it will hot reload any time you make a change to the front end. 
+
+2. **Start the back-end(if its not already running)**
+The back-end also needs to be running to make API calls. In a separate terminal,from the project root run 
+
+#### `npm start`

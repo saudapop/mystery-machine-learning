@@ -18,11 +18,12 @@ const images = {
   "Scooby-Doo": Scooby
 };
 
-const GITHUB_URL = "https://github.com/peterhurford/mystery_machine_learning";
+const GITHUB_URL = "https://github.com/saudapop/mystery-machine-learning";
 
 function App() {
   const [data, setData] = useState();
   const [textToPredict, setTextToPredict] = useState();
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 800);
 
   /**
    * This function makes our api calls. We could attach it to a
@@ -31,7 +32,7 @@ function App() {
    */
   function predictWhoSaidIt() {
     axios
-      .post("http://localhost:3000/predict", {
+      .post("/predict", {
         line: textToPredict
       })
       .then(res => {
@@ -58,26 +59,34 @@ function App() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [textToPredict]);
 
+  useEffect(() => {
+    window.addEventListener("resize", () =>
+      setIsMobile(window.innerWidth < 800)
+    );
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <div>
-          <a href={GITHUB_URL}>
-            <img className="github-logo" src={githubLogo} alt="github" />
-          </a>
+      <header className={`The-View ${isMobile ? "mobile" : ""}`}>
+        <div className="top-content">
+          <div>
+            <a href={GITHUB_URL}>
+              <img className="github-logo" src={githubLogo} alt="github" />
+            </a>
+          </div>
+          <div className="header">
+            <span>Mystery Machine Learning!</span>
+            <img src={logo} className="App-logo" alt="logo" />
+          </div>
+          <div>Who said :</div>
+          <div className="text-preview">
+            "{!textToPredict ? "___________" : textToPredict}" ?
+          </div>
+          <textarea
+            className="text-area"
+            onChange={e => setTextDebounced(e.target.value)}
+          />
         </div>
-        <div className="header">
-          <span>Mystery Machine Learning!</span>
-          <img src={logo} className="App-logo" alt="logo" />
-        </div>
-
-        <div className="text-preview">
-          Who said : "{!textToPredict ? "___________" : textToPredict}" ?
-        </div>
-        <textarea
-          className="text-area"
-          onChange={e => setTextDebounced(e.target.value)}
-        />
         {data && (
           <div className="content">
             <PredictionsContainer data={data} />

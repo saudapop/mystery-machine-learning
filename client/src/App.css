@@ -10,15 +10,19 @@
   /* pointer-events: none; */
 }
 
-.App-header {
+.The-View {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.mobile {
+  flex-direction: column;
 }
 
 .github-logo {
@@ -29,8 +33,13 @@
   filter: invert(100%);
 }
 
+.top-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .header {
-  margin-bottom: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -39,7 +48,10 @@
 
 .text-preview {
   font-size: 2.5vw;
-  max-width: 80vw;
+  max-height: 10vw;
+  max-width: 50vw;
+  word-break: break-all;
+  overflow: scroll;
 }
 
 .text-area {
@@ -56,14 +68,24 @@
 
 .winner,
 .data-table {
-  margin: 25px 0px;
+  margin: 25px 10px;
   display: flex;
   justify-content: center;
 }
 
+.data-table {
+  min-width: 35vw;
+  margin-left: 0;
+}
+
+.winner {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
 .image-container {
-  width: 50%;
-  margin: 0 auto;
+  width: 75%;
 }
 
 .winner-image {
@@ -80,6 +102,7 @@
 .results {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   align-items: center;
   align-self: flex-start;
   font-size: 2.5vw;

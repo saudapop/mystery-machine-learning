@@ -1,6 +1,9 @@
 const express = require("express");
 const axios = require("axios");
 const path = require("path");
+const opn = require("opn");
+const ip = require("ip");
+
 const API_TOKEN = require("./constants");
 
 const app = express();
@@ -40,8 +43,11 @@ app.post("/predict", (req, res) => {
     .catch(err => console.log(err));
 });
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3894;
 
 app.listen(port, () => {
-  console.log("App is running on http://localhost:" + port);
+  console.log(
+    `App is running locally on http://localhost:${port}\nand on your network at http://${ip.address()}:${port}`
+  );
+  opn(`http://localhost:${port}`);
 });

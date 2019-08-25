@@ -13,8 +13,7 @@
     "start": "PORT=9657 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "postinstall": "npm run build; cd ../; npm start"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"

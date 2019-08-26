@@ -8,22 +8,13 @@ This app was adapted (_...appdapted?_) from an app that [Peter Hurford](https://
 
 ## Run the app locally
 
-Clone the repo using whichever method you prefer. It's your life I can't tell how you should clone a repo.
-
-1. **Plug in your token**
-
-From the project root create a file called `constants.js` and enter this code but replace the string with your token:
-
-```
-const API_TOKEN = "PUT_YOUR_TOKEN_INSIDE_THESE_QUOTES;
-module.exports = API_TOKEN;
-```
+1. **Clone the repo** using whichever method you prefer. It's your life I can't tell how you should clone a repo.
 
 2. **Install the app**
 
-Assuming you have node and npm installed, just run this little script
+Assuming you have node and npm installed, just run this little script and **plug in your API token inside the quotes**
 
-#### `./install.sh`
+#### `./install.sh "PUT_YOUR_TOKEN_HERE`
 
 It will open the app in your default browser. It looks best in chrome but that's just one humble dev's opinion.
 

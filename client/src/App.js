@@ -105,7 +105,7 @@ function PredictionsContainer({ data, isMobile }) {
     <div className="results">
       {data && data.prediction && (
         <div className="winner">
-          It was probably...
+          Probably...
           <div
             className={`${
               isMobile ? "image-container-mobile" : "image-container"

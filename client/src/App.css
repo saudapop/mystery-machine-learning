@@ -66,6 +66,19 @@
   background-color: white;
 }
 
+.text-area::placeholder {
+  opacity: 0.5;
+  font-size: 1vw;
+}
+
+.mobile-text-area {
+  min-height: 25vw;
+}
+
+.mobile-text-area::placeholder {
+  font-size: 2vw;
+}
+
 .winner,
 .data-table {
   margin: 25px 10px;
@@ -78,6 +91,10 @@
   margin-left: 0;
 }
 
+.data-table-mobile {
+  min-width: 45vw;
+}
+
 .winner {
   display: flex;
   align-items: center;
@@ -86,6 +103,10 @@
 
 .image-container {
   width: 75%;
+}
+
+.image-container-mobile {
+  width: 50%;
 }
 
 .winner-image {

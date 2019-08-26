@@ -78,18 +78,21 @@ function App() {
             <span>Mystery Machine Learning!</span>
             <img src={logo} className="App-logo" alt="logo" />
           </div>
-          <div>Who said :</div>
+          <div>Who would say:</div>
           <div className="text-preview">
             "{!textToPredict ? "___________" : textToPredict}" ?
           </div>
           <textarea
-            className="text-area"
+            className={`text-area ${isMobile ? "mobile-text-area" : ""}`}
             onChange={e => setTextDebounced(e.target.value)}
+            placeholder={
+              "What is this app?\nMystery Machine Learning uses the DataRobot AI API to predict who might have said whatever text is typed into this box!\n\nStart typing in one of these quotes to test it out:\n -'Zoinks!'\n -'Jinkies!'\n -'Let's split up guys!'"
+            }
           />
         </div>
         {data && (
           <div className="content">
-            <PredictionsContainer data={data} />
+            <PredictionsContainer data={data} isMobile={isMobile} />
           </div>
         )}
       </header>
@@ -97,13 +100,17 @@ function App() {
   );
 }
 
-function PredictionsContainer({ data }) {
+function PredictionsContainer({ data, isMobile }) {
   return (
     <div className="results">
       {data && data.prediction && (
         <div className="winner">
           It was probably...
-          <div className="image-container">
+          <div
+            className={`${
+              isMobile ? "image-container-mobile" : "image-container"
+            }`}
+          >
             <img
               className="winner-image"
               src={images[data.prediction]}
@@ -114,7 +121,7 @@ function PredictionsContainer({ data }) {
         </div>
       )}
 
-      <div className="data-table">
+      <div className={`${isMobile ? "data-table-mobile" : "data-table"}`}>
         <table>
           <tbody>
             {data &&

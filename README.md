@@ -12,13 +12,15 @@ This app was adapted (_...appdapted?_) from an app that [Peter Hurford](https://
 
 #### `git clone https://github.com/saudapop/mystery-machine-learning.git`
 
+Copy paste and past that bad boy.
+
 2. **Install the app**
 
 Assuming you have node and npm installed, just run this little script and **plug in your API token inside the quotes**
 
 #### `./install.sh "PUT_YOUR_TOKEN_HERE"`
 
-It will open the app in your default browser. It looks best in chrome but that's just one humble dev's opinion.
+It will open the app in your default browser. It looks best in chrome but that's just one dude's opinion.
 
 ## Run the app in development mode
 

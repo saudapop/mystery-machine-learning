@@ -10,9 +10,9 @@ This app was adapted (_...appdapted?_) from an app that [Peter Hurford](https://
 
 1. **Clone the repo** 
 
-#### `git clone https://github.com/saudapop/mystery-machine-learning.git`
+Copy, paste, run:
 
-Copy paste and past that bad boy.
+#### `git clone https://github.com/saudapop/mystery-machine-learning.git`
 
 2. **Install the app**
 

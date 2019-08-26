@@ -21,9 +21,9 @@ module.exports = API_TOKEN;
 
 2. **Install the app**
 
-Assuming you have node and npm installed, just run
+Assuming you have node and npm installed, just run this little script
 
-#### `npm i`
+#### `./install.sh`
 
 It will open the app in your default browser. It looks best in chrome but that's just one humble dev's opinion.
 

@@ -2,7 +2,7 @@
 
 _powered by [DataRobot AI API](https://developers.datarobot.com)_
 
-To see the [app in action click here](http://157.245.8.180:3489) or read below to run the app locally.
+To see the [app in action click here](http://157.245.8.180:3894/) or read below to run the app locally.
 
 This app was adapted (_...appdapted?_) from an app that [Peter Hurford](https://github.com/peterhurford) and I collaborated on (aka I built the front-end) for his presentation at [THAT Conference 2019](https://github.com/peterhurford/mystery_machine_learning/blob/master/slides.pdf). The only difference between the apps is this one is using the DataRobot AI API to power the prediction engine.
 

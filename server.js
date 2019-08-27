@@ -4,7 +4,7 @@ const path = require("path");
 const opn = require("opn");
 const ip = require("ip");
 
-const API_TOKEN = require("./constants");
+const { API_TOKEN, DEPLOYMENT_ID } = require("./constants");
 
 const app = express();
 
@@ -31,7 +31,7 @@ app.post("/predict", (req, res) => {
   console.log(req.body);
   axios
     .post(
-      "https://developers.datarobot.com/predApi/v1.0/deployments/5d55d0067741a307314347f5/predictions/",
+      `https://developers.datarobot.com/predApi/v1.0/deployments/${DEPLOYMENT_ID}/predictions/`,
       [{ line: req.body.line }],
       {
         headers: {

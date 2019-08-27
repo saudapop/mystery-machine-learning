@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.19.0",
+    "datarobot-ai": "file:datarobot-ai-1.0.2.tgz",
     "express": "^4.17.1",
     "ip": "^1.1.5",
     "opn": "^6.0.0"

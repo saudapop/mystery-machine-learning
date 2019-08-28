@@ -15,9 +15,9 @@ Copy, paste, run:
 
 #### `git clone https://github.com/saudapop/mystery-machine-learning.git`
 
-then [download the NodeJs client for DataRobot AI API](https://developers.datarobot.com/learn/clients/javascript/) then run 
+then [download the NodeJs client library for DataRobot AI API](https://developers.datarobot.com/learn/clients/javascript/) then run 
 
-#### `npm install ~/insert/path/to/the/client/`
+#### `npm install ~/insert/path/to/the/library/`
 
 2. **Install the app**
 

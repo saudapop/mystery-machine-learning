@@ -1,10 +1,11 @@
 const express = require("express");
+const process = require("process");
 const axios = require("axios");
 const path = require("path");
 const opn = require("opn");
 const ip = require("ip");
 
-const { API_TOKEN, DEPLOYMENT_ID } = require("./constants");
+require("dotenv").config();
 
 const app = express();
 
@@ -31,11 +32,11 @@ app.post("/predict", (req, res) => {
   console.log(req.body);
   axios
     .post(
-      `https://developers.datarobot.com/predApi/v1.0/deployments/${DEPLOYMENT_ID}/predictions/`,
+      `https://developers.datarobot.com/predApi/v1.0/deployments/${process.env.DEPLOYMENT_ID}/predictions/`,
       [{ line: req.body.line }],
       {
         headers: {
-          Authorization: "bearer " + API_TOKEN
+          Authorization: "bearer " + process.env.API_TOKEN
         }
       }
     )
@@ -44,9 +45,10 @@ app.post("/predict", (req, res) => {
 });
 
 const port = process.env.PORT || 3894;
-
+const CYAN = "\x1b[36m%s\x1b[0m";
 app.listen(port, () => {
   console.log(
+    CYAN,
     `App is running locally on http://localhost:${port}\nand on your network at http://${ip.address()}:${port}`
   );
   opn(`http://localhost:${port}`);

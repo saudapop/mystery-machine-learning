@@ -15,16 +15,15 @@ async function makeAi() {
     "character",
     "./transcripts/scooby_doo_lines.csv"
   );
-  //  get the output and write the credentials to constants.js
+  //  get the output and write the credentials to .env
   const output = await scooby_AI.getOutput("character");
   fs.writeFile(
-    "./constants.js",
+    "./.env",
     `
-const API_TOKEN = "${process.argv[2]}";
-const DEPLOYMENT_ID = "${output.source.deploymentId}"; 
-module.exports = {API_TOKEN, DEPLOYMENT_ID};
-`,
-    () => console.log("AI was successfully created!")
+  API_TOKEN=${process.argv[2]}
+  DEPLOYMENT_ID=${output.source.deploymentId}
+  `,
+    () => console.log("\n\nAI was successfully created!\n")
   );
 }
 

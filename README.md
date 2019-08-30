@@ -7,13 +7,17 @@ To see the [app in action click here](http://157.245.8.180:3894/) or read below 
 This app was adapted (_...appdapted?_) from an app that [Peter Hurford](https://github.com/peterhurford) and I collaborated on (aka I built the front-end) for his presentation at [THAT Conference 2019](https://github.com/peterhurford/mystery_machine_learning/blob/master/slides.pdf). The only difference between the apps is this one is using the DataRobot AI API to power the prediction engine.
 
 ## Run the app locally
-**DISCLAIMER: You'll need to have an DataRobot AI API token to run the app locally**
+**DISCLAIMER: You'll need to have a DataRobot AI API token to run the app locally**
 
 1. **Clone the repo** 
 
 Copy, paste, run:
 
 #### `git clone https://github.com/saudapop/mystery-machine-learning.git`
+
+then [download the NodeJs client library for DataRobot AI API](https://developers.datarobot.com/learn/clients/javascript/) then run 
+
+#### `npm install ~/insert/path/to/the/library/`
 
 2. **Install the app**
 

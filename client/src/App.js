@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { debounce } from "lodash";
 import axios from "axios";
 import logo from "./misc-images/mystery_machine.png";
-import githubLogo from "./misc-images/github-logo.png";
+import GithubCorner from "react-github-corner";
 import Shaggy from "./scooby-doo-characters/Shaggy_Rogers.png";
 import Fred from "./scooby-doo-characters/Fred_Jones.png";
 import Daphne from "./scooby-doo-characters/Daphne_Blake.png";
@@ -70,9 +70,13 @@ function App() {
       <header className={`The-View ${isMobile ? "mobile" : ""}`}>
         <div className="top-content">
           <div>
-            <a href={GITHUB_URL}>
-              <img className="github-logo" src={githubLogo} alt="github" />
-            </a>
+            <GithubCorner
+              href={GITHUB_URL}
+              direction="left"
+              size={isMobile ? 40 : 80}
+              bannerColor="rgba(0,0,0,.2)"
+              octoColor="rgba(255,255,255, 1"
+            />
           </div>
           <div className="header">
             <span>Mystery Machine Learning!</span>

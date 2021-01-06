@@ -4,7 +4,7 @@
   "private": true,
   "proxy": "http://localhost:3894",
   "dependencies": {
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-github-corner": "^2.3.0",
